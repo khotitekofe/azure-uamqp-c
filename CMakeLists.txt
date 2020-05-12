@@ -27,8 +27,10 @@ set(original_run_int_tests ${run_int_tests})
 set(original_run_unittests ${run_unittests})
 
 # Set coverage instrumentation.
-set(CMAKE_CXX_FLAGS "-g -Wall -fprofile-arcs -ftest-coverage")
-set(CMAKE_C_FLAGS "-g -Wall -fprofile-arcs -ftest-coverage")
+#set(CMAKE_CXX_FLAGS "-g -Wall -fprofile-arcs -ftest-coverage")
+#set(CMAKE_C_FLAGS "-g -Wall -fprofile-arcs -ftest-coverage")
+set(CMAKE_CXX_FLAGS "-g -Wall -c -emit-llvm")
+set(CMAKE_C_FLAGS "-g -Wall -c -emit-llvm")
 
 set(run_e2e_tests OFF)
 set(run_int_tests OFF)
